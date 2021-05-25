@@ -10,9 +10,8 @@
     "test": "jest",
     "test:watch": "yarn test --watch",
     "generate": "yarn plop --plopfile generators/plopfile.js",
-    "storybook": "start-storybook -s ./public -p 6006",
-    "build-storybook": "build-storybook -s ./public",
-    "postinstall": "husky install"
+    "postinstall": "husky install",
+    "codegen": "graphql-codegen --config codegen.yml"
   },
   "lint-staged": {
     "src/**/*": [
@@ -21,20 +20,29 @@
     ]
   },
   "dependencies": {
+    "@styled-icons/evaicons-outline": "^10.18.0",
+    "graphql": "^15.5.0",
+    "graphql-request": "^3.4.0",
+    "leaflet": "^1.7.1",
     "next": "10.1.3",
     "next-pwa": "^5.2.9",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "styled-components": "5.2.3"
+    "react-leaflet": "^3.1.0",
+    "styled-components": "5.2.3",
+    "webpack": "4"
   },
   "devDependencies": {
     "@babel/core": "^7.13.15",
     "@babel/preset-typescript": "^7.13.0",
-    "@storybook/addon-essentials": "6.2.7",
-    "@storybook/react": "6.2.7",
+    "@graphql-codegen/add": "^2.0.2",
+    "@graphql-codegen/cli": "1.21.4",
+    "@graphql-codegen/typescript": "1.22.0",
+    "@graphql-codegen/typescript-operations": "1.17.16",
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.6",
     "@types/jest": "^26.0.22",
+    "@types/leaflet": "^1.7.0",
     "@types/node": "^14.14.37",
     "@types/react": "^17.0.3",
     "@types/styled-components": "^5.1.9",
@@ -53,7 +61,6 @@
     "lint-staged": "^10.5.4",
     "plop": "^2.7.4",
     "prettier": "^2.2.1",
-    "storybook-addon-next-router": "^2.0.4",
     "typescript": "^4.2.4"
   }
 }
